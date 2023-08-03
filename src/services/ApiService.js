@@ -15,6 +15,15 @@ class APIService {
       throw error;
     }
   }
+
+  async post(data) {
+    try {
+      const response = await this.api.post(data);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 module.exports = APIService;
